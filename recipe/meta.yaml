@@ -1,4 +1,4 @@
-{% set version = '4.1.2' %}
+{% set version = '4.1.4' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,13 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/statnet.common_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/statnet.common/statnet.common_{{ version }}.tar.gz
-  sha256: ed39d631b6518a55058515e26ee3cb1a2f4c83bf593aa018f33493200e326f40
+  sha256: 2cea993a52f27d8a5a5e91d3a5dcffcc86523001f6f646cd26ec37c2486dbe91
 
 build:
   merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,13 +27,12 @@ requirements:
     - {{native}}toolchain        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
-    - {{posix}}sed  # [win]
-    - {{posix}}coreutils  # [win]
-
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-coda
-
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
@@ -61,4 +59,5 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - dbast
     - stevierene82
