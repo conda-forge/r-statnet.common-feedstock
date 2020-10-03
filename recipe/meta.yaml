@@ -1,4 +1,4 @@
-{% set version = "4.3.0" %}
+{% set version = "4.4.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/statnet.common_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/statnet.common/statnet.common_{{ version }}.tar.gz
-  sha256: 834a3359eac967df0420eee416ae4983e3b502a3de56bb24f494a7ca4104e959
+  sha256: 4ecf2b84718d7fb60f196215b4cf6f52cd6b26cc9148a6da6981b26e885509fd
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,10 +44,9 @@ test:
 about:
   home: http://www.statnet.org
   license: GPL-3
-  summary: Non-statistical utilities used by the software developed by the Statnet Project. They
-    may also be of use to others.
+  summary: Non-statistical utilities used by the software developed by the Statnet Project. They may also be of use to others.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
