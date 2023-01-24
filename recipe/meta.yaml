@@ -1,4 +1,4 @@
-{% set version = "4.7.0" %}
+{% set version = "4.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/statnet.common_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/statnet.common/statnet.common_{{ version }}.tar.gz
-  sha256: b69731a606b56b729b1917375efafb572b960ce5000a0fc2ec5222fd7d80a1b3
+  sha256: def999130673fbcb315fecf3620a2559864f51961a828625aa5cd5fded7946f0
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
