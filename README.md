@@ -1,11 +1,22 @@
+About r-statnet.common-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-statnet.common-feedstock/blob/main/LICENSE.txt)
+
 About r-statnet.common
-======================
+----------------------
 
 Home: http://www.statnet.org
 
 Package license: GPL-3.0-only
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-statnet.common-feedstock/blob/main/LICENSE.txt)
+Summary: Non-statistical utilities used by the software developed by the Statnet Project. They may also be of use to others.
+About r-statnet.common
+----------------------
+
+Home: http://www.statnet.org
+
+Package license: GPL-3.0-only
 
 Summary: Non-statistical utilities used by the software developed by the Statnet Project. They may also be of use to others.
 
