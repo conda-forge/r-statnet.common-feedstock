@@ -1,4 +1,4 @@
-{% set version = "4.9.0" %}
+{% set version = "4.10.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/statnet.common_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/statnet.common/statnet.common_{{ version }}.tar.gz
-  sha256: a485dc6e363a993d87336fbd1027adb1cd7b9103447fd63904cae4dc3bfc2dd7
+  sha256: b7bad83d3b86f7b7489634260970a32a119a34845219e8ed32993a10313541c3
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
